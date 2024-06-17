@@ -61,7 +61,7 @@ if(hacker1!=hacker2){
             console.log("Comparando letra " + (i+1) + " son iguales");
             if(hacker1.length===min && primero!=hacker1){
                 primero=hacker1;
-            }else if(hacker2.length===min && primero!=hacker1){
+            }else if(hacker2.length===min && primero!=hacker2){
                 primero=hacker2;
             }
         }
