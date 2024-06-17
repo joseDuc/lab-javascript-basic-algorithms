@@ -1,6 +1,6 @@
 // Iteration 1: Names and Input
 
-let hacker1 ="Meteroro";
+let hacker1 ="Meteroros";
 let hacker2 ="Chrome";
 
 
@@ -59,8 +59,10 @@ if(hacker1!=hacker2){
             break;
         }else{
             console.log("Comparando letra " + (i+1) + " son iguales");
-            if(hacker1.length===min){
+            if(hacker1.length===min && primero!=hacker1){
                 primero=hacker1;
+            }else if(hacker2.length===min && primero!=hacker1){
+                primero=hacker2;
             }
         }
         i++;
