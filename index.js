@@ -19,7 +19,11 @@ if (hacker1.length > hacker2.length){
 // Iteration 3: Loops
 let s ="";
 for (i=0; i<hacker1.length; i++){
-    s = s + " " + hacker1[i];
+    if (i===0){
+        s = s  + hacker1[i];
+    }else {
+        s = s + " " + hacker1[i];
+    }
 }
 console.log(s.toUpperCase());
 s="";
@@ -38,7 +42,7 @@ if (hacker1.length < hacker2.length){
 }else{
     min=hacker2.length; /*cualquier valor de longitud de las dos palabras me sirve (son igual de largas) */
 }
-console.log(min);
+console.log("Longitud de la cadena mas corta " + min);
 
 let primero="";/*aquí guardaré el resultado (si no son iguales)*/
 i=0;/*inicializo a 0 el contador de posiciones utilizado anteriormente*/
@@ -71,6 +75,42 @@ if(hacker1!=hacker2){
     console.log("What?! You both have the same name?");
 }
 
+/*Bonus Time*/
+let coincide=0;
+let lista=null;
+let longText ="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n";
+lista= longText.split(" ");
+console.log("El texto contiene " + lista.length + " palabras");
+console.log(lista);
+for (i=0;i<lista.length;i++){
+    if (lista[i]==="et"){
+        coincide+=1;
+    }
+}
+if (coincide===1) {
+    console.log("Aparece " + coincide + " vez la palabra 'et'" )
 
+}else{
+    console.log("Aparecen " + coincide + " veces la palabra 'et'" )
+
+}
+
+let phraseToCheck="ana";
+let longitud =phraseToCheck.length;
+let esPalindromo=true;
+i=0;
+console.log("lonitud de palabra " + longitud);
+while(i<phraseToCheck.length){
+    if (phraseToCheck[i]!=phraseToCheck[longitud-(1+i)]){
+        esPalindromo=false;
+        console.log("Pasa booleana a false");
+    }
+    i++;
+}
+if (esPalindromo){
+    console.log("La palabra '" + phraseToCheck + "' es palíndromo");
+}else {
+    console.log("La palabra '" + phraseToCheck + "' no es palíndromo");
+}
 
 
